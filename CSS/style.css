@@ -1,0 +1,33 @@
+body{
+    background-color: rgb(40, 40, 40);
+    margin: 0;
+}
+
+.cabeca{
+    background-color: white;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 7px;
+    display: flex;
+    gap: 62%;
+}
+
+.titulo{
+    padding-left: 50px;
+    margin-bottom: 0;
+    font-size: 30px;
+    margin-top: 1%;
+}
+
+.nav ul{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    font-size: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: black;
+}
