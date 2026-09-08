@@ -1,33 +1,85 @@
 body{
-    background-color: rgb(40, 40, 40);
+    background-image: url(/IMAGENS/background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
     margin: 0;
 }
 
 .cabeca{
     background-color: white;
     font-family: "Bebas Neue", sans-serif;
-    font-weight: 400;
+    font-weight: 100;
     font-style: normal;
     padding: 7px;
     display: flex;
-    gap: 62%;
+    gap: 60%;
 }
 
-.titulo{
-    padding-left: 50px;
-    margin-bottom: 0;
-    font-size: 30px;
-    margin-top: 1%;
+.logo{
+    margin-left: 90px;
 }
 
 .nav ul{
     list-style: none;
     display: flex;
     gap: 30px;
-    font-size: 20px;
+    font-size: 23px;
+    margin-bottom: 0;
+    margin-top: 3%;
 }
 
 .nav a {
     text-decoration: none;
     color: black;
+}
+
+.titulo {
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+}
+
+.Ct {
+    color: white;
+    font-size: 50pt;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fadeInDown {
+    animation-name: fadeInDown;
+}
+
+.Ct2 {
+    color: white;
+    font-size: 50pt;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fadeInDown {
+    animation-name: fadeInDown;
 }
