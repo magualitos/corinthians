@@ -83,3 +83,8 @@ body{
 .fadeInDown {
     animation-name: fadeInDown;
 }
+
+.subtitulo{
+    color: white;
+    font-size: 50pt;
+}
