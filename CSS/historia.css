@@ -1,0 +1,138 @@
+.historia {
+    width: 90%;
+    margin: auto;
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.historia > h1 {
+    text-align: center;
+    font-size: 50px;
+}
+
+
+/* LINHA CENTRAL */
+
+.linha {
+    position: relative;
+    max-width: 1000px;
+    margin: 80px auto;
+    padding: 20px 0;
+}
+
+
+/* LINHA BRANCA */
+
+.linha::before {
+    content: "";
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    left: 50%;
+
+    width: 3px;
+
+    background-color: white;
+
+    transform: translateX(-50%);
+}
+
+
+/* EVENTOS */
+
+.evento {
+    position: relative;
+
+    width: 42%;
+
+    padding: 25px;
+    margin: 100px 0;
+
+    box-sizing: border-box;
+
+    opacity: 0;
+    transform: translateY(60px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+
+/* EVENTO APARECE */
+
+.evento.mostrar {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* LADO ESQUERDO */
+
+.evento:nth-child(odd) {
+    margin-right: auto;
+}
+
+
+/* LADO DIREITO */
+
+.evento:nth-child(even) {
+    margin-left: auto;
+}
+
+
+/* CÍRCULO DA TIMELINE */
+
+.evento::before {
+    content: "";
+
+    position: absolute;
+
+    top: 30px;
+
+    width: 16px;
+    height: 16px;
+
+    border: 3px solid white;
+    background-color: black;
+
+    border-radius: 50%;
+}
+
+
+/* CÍRCULO DOS EVENTOS ÍMPARES */
+
+.evento:nth-child(odd)::before {
+    right: -52px;
+}
+
+
+/* CÍRCULO DOS EVENTOS PARES */
+
+.evento:nth-child(even)::before {
+    left: -52px;
+}
+
+
+/* ANO */
+
+.ano {
+    font-size: 40px;
+}
+
+
+/* TÍTULO */
+
+.evento h2 {
+    font-size: 32px;
+}
+
+
+/* TEXTO */
+
+.evento p {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+}
