@@ -1,0 +1,681 @@
+.democracia {
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+
+/* HERO */
+
+.hero-democracia {
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.65),
+            rgba(0,0,0,0.85)
+        ),
+        url("../IMAGENS/democracia-corinthiana.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+}
+
+.hero-conteudo {
+    animation: aparecerHero 1.5s ease;
+}
+
+.hero-ano {
+    font-size: 30px;
+    letter-spacing: 6px;
+}
+
+.hero-democracia h1 {
+    font-size: 90px;
+    line-height: 0.9;
+    margin: 25px 0;
+    letter-spacing: 5px;
+}
+
+.hero-democracia p {
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    letter-spacing: 3px;
+}
+
+
+/* ANIMAÇÃO HERO */
+
+@keyframes aparecerHero {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* SEÇÕES */
+
+.secao-introducao,
+.protagonistas,
+.funcionamento,
+.linha-democracia,
+.alem-futebol,
+.legado {
+
+    width: 90%;
+    max-width: 1200px;
+    margin: 150px auto;
+
+}
+
+
+/* NÚMERO */
+
+.numero-secao {
+    display: block;
+
+    font-size: 20px;
+    letter-spacing: 4px;
+
+    margin-bottom: 15px;
+
+    color: #aaaaaa;
+}
+
+
+/* INTRODUÇÃO */
+
+.secao-introducao {
+
+    display: flex;
+    align-items: center;
+    gap: 70px;
+
+}
+
+.texto-introducao {
+    width: 50%;
+}
+
+.texto-introducao h2,
+.protagonistas h2,
+.funcionamento h2,
+.linha-democracia h2,
+.texto-alem h2,
+.legado h2 {
+
+    font-size: 55px;
+    line-height: 1;
+    margin: 0 0 30px;
+
+    letter-spacing: 3px;
+}
+
+.texto-introducao p,
+.texto-alem p,
+.legado > p {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    color: #dddddd;
+
+}
+
+.imagem-introducao {
+    width: 50%;
+    overflow: hidden;
+}
+
+.imagem-introducao img {
+
+    width: 100%;
+    height: 400px;
+
+    object-fit: cover;
+
+    filter: grayscale(100%);
+
+    transition: 0.6s ease;
+}
+
+.imagem-introducao img:hover {
+
+    filter: grayscale(0%);
+
+    transform: scale(1.04);
+
+}
+
+
+/* PROTAGONISTAS */
+
+.protagonistas {
+    text-align: center;
+}
+
+.subtitulo-secao {
+
+    font-family: Arial, sans-serif;
+
+    color: #aaaaaa;
+
+    margin-bottom: 60px;
+
+}
+
+
+.cards-protagonistas {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+
+}
+
+
+.card-protagonista {
+
+    background: rgba(0, 0, 0, 0.75);
+
+    border: 1px solid rgba(255,255,255,0.25);
+
+    text-align: left;
+
+    transition: 0.4s ease;
+
+    overflow: hidden;
+}
+
+.card-protagonista:hover {
+
+    border-color: white;
+
+    transform: translateY(-8px);
+
+}
+
+.card-protagonista img {
+
+    width: 100%;
+    height: 300px;
+
+    object-fit: cover;
+
+    filter: grayscale(100%);
+
+    transition: 0.5s ease;
+
+}
+
+.card-protagonista:hover img {
+
+    filter: grayscale(0%);
+
+    transform: scale(1.04);
+
+}
+
+.conteudo-card {
+
+    padding: 25px;
+
+}
+
+.conteudo-card h3 {
+
+    font-size: 35px;
+
+    margin: 0 0 15px;
+
+    letter-spacing: 2px;
+
+}
+
+.conteudo-card p {
+
+    font-family: Arial, sans-serif;
+
+    color: #cccccc;
+
+    line-height: 1.6;
+
+}
+
+
+/* DESTAQUE */
+
+.card-protagonista.destaque {
+
+    grid-column: 1 / 3;
+
+    max-width: 500px;
+
+    width: 100%;
+
+    justify-self: center;
+
+}
+
+
+/* COMO FUNCIONAVA */
+
+.funcionamento {
+
+    text-align: center;
+
+}
+
+
+.blocos-funcionamento {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-top: 60px;
+
+}
+
+.bloco {
+
+    padding: 35px;
+
+    background: rgba(0,0,0,0.75);
+
+    border: 1px solid rgba(255,255,255,0.25);
+
+    text-align: left;
+
+    transition: 0.3s ease;
+
+}
+
+.bloco:hover {
+
+    border-color: white;
+
+    transform: translateY(-6px);
+
+}
+
+.bloco > span {
+
+    font-size: 20px;
+
+    color: #999999;
+
+}
+
+.bloco h3 {
+
+    font-size: 30px;
+
+    margin: 20px 0;
+
+}
+
+.bloco p {
+
+    font-family: Arial, sans-serif;
+
+    color: #cccccc;
+
+    line-height: 1.6;
+
+}
+
+
+/* TIMELINE */
+
+.linha-democracia {
+
+    text-align: center;
+
+}
+
+
+.timeline-democracia {
+
+    position: relative;
+
+    max-width: 900px;
+
+    margin: 80px auto;
+
+}
+
+
+.timeline-democracia::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 0;
+    bottom: 0;
+
+    width: 3px;
+
+    background: white;
+
+    transform: translateX(-50%);
+
+}
+
+
+.momento {
+
+    position: relative;
+
+    width: 45%;
+
+    margin: 100px 0;
+
+    text-align: left;
+
+}
+
+
+.momento:nth-child(odd) {
+
+    margin-right: auto;
+
+}
+
+
+.momento:nth-child(even) {
+
+    margin-left: auto;
+
+}
+
+
+.ano-momento {
+
+    font-size: 60px;
+
+    letter-spacing: 3px;
+
+}
+
+
+.momento h3 {
+
+    font-size: 35px;
+
+    margin: 10px 0 15px;
+
+}
+
+
+.momento p {
+
+    font-family: Arial, sans-serif;
+
+    color: #cccccc;
+
+    line-height: 1.7;
+
+}
+
+
+/* ALÉM DO FUTEBOL */
+
+.alem-futebol {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 70px;
+
+}
+
+
+.imagem-alem {
+
+    width: 50%;
+
+}
+
+.imagem-alem img {
+
+    width: 100%;
+
+    height: 450px;
+
+    object-fit: cover;
+
+    filter: grayscale(100%);
+
+    transition: 0.5s ease;
+
+}
+
+.imagem-alem img:hover {
+
+    filter: grayscale(0%);
+
+}
+
+
+.texto-alem {
+
+    width: 50%;
+
+}
+
+
+/* LEGADO */
+
+.legado {
+
+    text-align: center;
+
+    max-width: 900px;
+
+}
+
+
+.frase-final {
+
+    margin-top: 70px;
+
+    padding: 40px;
+
+    border-top: 1px solid rgba(255,255,255,0.4);
+
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+
+}
+
+.frase-final span {
+
+    display: block;
+
+    font-size: 20px;
+
+    letter-spacing: 5px;
+
+    color: #aaaaaa;
+
+}
+
+.frase-final strong {
+
+    display: block;
+
+    font-size: 55px;
+
+    letter-spacing: 4px;
+
+    margin: 15px 0;
+
+}
+
+
+/* BOTÃO */
+
+.voltar-historia {
+
+    display: flex;
+
+    justify-content: center;
+
+    margin: 100px 0;
+
+}
+
+
+.btn-voltar {
+
+    display: inline-block;
+
+    padding: 15px 35px;
+
+    border: 2px solid white;
+
+    color: white;
+
+    background-color: transparent;
+
+    text-decoration: none;
+
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: 24px;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s ease;
+
+}
+
+
+.btn-voltar:hover {
+
+    background-color: white;
+
+    color: black;
+
+    transform: scale(1.05);
+
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 800px) {
+
+    .hero-democracia {
+
+        min-height: 500px;
+
+    }
+
+    .hero-democracia h1 {
+
+        font-size: 55px;
+
+    }
+
+    .hero-ano {
+
+        font-size: 22px;
+
+    }
+
+    .secao-introducao,
+    .alem-futebol {
+
+        flex-direction: column;
+
+    }
+
+    .texto-introducao,
+    .imagem-introducao,
+    .texto-alem,
+    .imagem-alem {
+
+        width: 100%;
+
+    }
+
+    .texto-introducao h2,
+    .protagonistas h2,
+    .funcionamento h2,
+    .linha-democracia h2,
+    .texto-alem h2,
+    .legado h2 {
+
+        font-size: 42px;
+
+    }
+
+    .cards-protagonistas {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .card-protagonista.destaque {
+
+        grid-column: auto;
+
+    }
+
+    .blocos-funcionamento {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .timeline-democracia::before {
+
+        left: 10px;
+
+    }
+
+    .momento,
+    .momento:nth-child(odd),
+    .momento:nth-child(even) {
+
+        width: calc(100% - 40px);
+
+        margin-left: 40px;
+
+    }
+
+    .imagem-introducao img,
+    .imagem-alem img {
+
+        height: 300px;
+
+    }
+
+}

@@ -196,3 +196,28 @@
 
     transform: scale(1.05);
 }
+
+/*democracia botao*/
+
+.link-democracia {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.clique-democracia {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 18px;
+    border: 1px solid white;
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 18px;
+    letter-spacing: 2px;
+    transition: 0.3s ease;
+}
+
+.link-democracia:hover .clique-democracia {
+    background-color: white;
+    color: black;
+}
