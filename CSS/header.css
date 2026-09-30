@@ -111,7 +111,7 @@
 
     justify-content: center;
 
-    gap: 25px;
+    gap: 20px;
 
     padding: 30px;
 
@@ -211,6 +211,18 @@
 
 .header.aberto .menu a:nth-child(7) {
     transition-delay: 0.40s;
+}
+
+.header.aberto .menu a:nth-child(8) {
+    transition-delay: 0.45s;
+}
+
+.header.aberto .menu a:nth-child(9) {
+    transition-delay: 0.50s;
+}
+
+.header.aberto .menu a:nth-child(10) {
+    transition-delay: 0.55s;
 }
 
 /* ================================= */
