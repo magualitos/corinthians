@@ -1,0 +1,1095 @@
+
+/* =====================================================
+   MUSEU CORINTHIANS — A FIEL TORCIDA
+===================================================== */
+
+body{
+    background-image: url(/IMAGENS/backhist.jpg);
+    background-repeat: repeat;
+    background-size: 100%;
+    margin: 0;
+}
+
+:root {
+    --fundo: #080808;
+    --fundo-card: #121212;
+    --branco: #f5f5f5;
+    --cinza: #b7b7b7;
+    --cinza-escuro: #292929;
+    --borda: rgba(255, 255, 255, 0.14);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    background-image: url(/IMAGENS/backhist.jpg);
+    background-repeat: repeat;
+    background-size: 100%;
+    color: var(--branco);
+    font-family: "Montserrat", sans-serif;
+    overflow-x: hidden;
+}
+
+body,
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+main {
+    overflow: clip;
+}
+
+.secao-padrao {
+    width: min(1200px, 90%);
+    margin-inline: auto;
+}
+
+.subtitulo-secao {
+    display: inline-block;
+    color: #bcbcbc;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.23em;
+    line-height: 1.8;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+}
+
+h2 {
+    margin-bottom: 22px;
+    font-size: clamp(2.8rem, 6vw, 5.4rem);
+    line-height: 0.95;
+    letter-spacing: 0.015em;
+}
+
+h2 span {
+    color: #999;
+}
+
+p {
+    color: #c2c2c2;
+    font-size: 0.96rem;
+    line-height: 1.9;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero-torcida {
+    position: relative;
+    display: flex;
+    min-height: 100svh;
+    align-items: center;
+    padding: 130px 9% 100px;
+    isolation: isolate;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.92) 0%,
+            rgba(0, 0, 0, 0.55) 48%,
+            rgba(0, 0, 0, 0.15) 100%
+        ),
+        url("../IMAGENS/TORCIDA/hero.jpg") center 40% / cover no-repeat,
+        #111;
+}
+
+.hero-sombra {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(
+        0deg,
+        var(--fundo) 0%,
+        transparent 35%,
+        rgba(0, 0, 0, 0.12) 100%
+    );
+}
+
+.hero-conteudo {
+    width: min(850px, 100%);
+    animation: entradaHero 1s ease both;
+}
+
+.etiqueta {
+    color: #d1d1d1;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.28em;
+}
+
+.hero-conteudo h1 {
+    margin: 20px 0 5px;
+    font-size: clamp(7rem, 22vw, 17rem);
+    line-height: 0.78;
+    letter-spacing: -0.025em;
+}
+
+.linha-hero {
+    width: 95px;
+    height: 4px;
+    margin: 35px 0 25px;
+    background: #fff;
+}
+
+.hero-conteudo p {
+    color: #f3f3f3;
+    font-size: clamp(0.95rem, 2vw, 1.25rem);
+    font-weight: 700;
+    line-height: 1.8;
+    letter-spacing: 0.13em;
+}
+
+.botao-explorar {
+    display: inline-flex;
+    align-items: center;
+    gap: 28px;
+    margin-top: 22px;
+    padding: 17px 23px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.botao-explorar span {
+    font-size: 1.2rem;
+}
+
+.botao-explorar:hover {
+    background: #fff;
+    color: #000;
+    transform: translateY(-3px);
+}
+
+.hero-numero {
+    position: absolute;
+    right: 5%;
+    bottom: 35px;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+}
+
+
+/* =====================================================
+   INTRODUÇÃO
+===================================================== */
+
+.introducao-fiel {
+    display: grid;
+    grid-template-columns: 55px 1fr 0.95fr;
+    align-items: center;
+    gap: 45px;
+    padding-top: 135px;
+    padding-bottom: 135px;
+}
+
+.introducao-lateral {
+    display: flex;
+    height: 260px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #aaa;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.introducao-lateral div {
+    flex: 1;
+    width: 1px;
+    margin: 18px 0;
+    background: #555;
+}
+
+.introducao-lateral span:last-child {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+
+.introducao-texto h2 {
+    margin-top: 20px;
+}
+
+.introducao-texto p {
+    max-width: 570px;
+}
+
+.texto-destaque {
+    margin-top: 25px;
+    padding-left: 17px;
+    border-left: 3px solid #fff;
+    color: #fff;
+    font-weight: 600;
+}
+
+.introducao-imagem {
+    position: relative;
+    min-width: 0;
+}
+
+.introducao-imagem img {
+    height: 460px;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: filter 0.6s ease;
+}
+
+.introducao-imagem:hover img {
+    filter: grayscale(25%);
+}
+
+.legenda-imagem {
+    display: block;
+    padding-top: 12px;
+    color: #858585;
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
+}
+
+
+/* =====================================================
+   CABEÇALHOS DAS SEÇÕES
+===================================================== */
+
+.cabecalho-secao {
+    max-width: 750px;
+    margin-bottom: 70px;
+}
+
+.cabecalho-secao h2 {
+    margin-top: 20px;
+}
+
+.cabecalho-secao p {
+    max-width: 600px;
+}
+
+
+/* =====================================================
+   LINHA DO TEMPO
+===================================================== */
+
+.historia-torcida {
+    padding-top: 60px;
+    padding-bottom: 135px;
+}
+
+.linha-tempo-torcida {
+    position: relative;
+}
+
+.linha-tempo-torcida::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 105px;
+    width: 1px;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        #555 8%,
+        #555 92%,
+        transparent
+    );
+    content: "";
+}
+
+.momento-torcida {
+    position: relative;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 45px;
+    padding: 35px 0 65px;
+}
+
+.momento-ano {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.momento-ano span {
+    padding: 12px 14px;
+    background: #f5f5f5;
+    color: #080808;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.7rem;
+    line-height: 1;
+}
+
+.momento-conteudo {
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--borda);
+}
+
+.momento-numero {
+    color: #888;
+    font-size: 0.67rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+}
+
+.momento-conteudo h3 {
+    margin: 15px 0;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+}
+
+.momento-conteudo p {
+    max-width: 760px;
+}
+
+.link-secao {
+    display: inline-block;
+    margin-top: 15px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #aaa;
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    transition: color 0.3s ease;
+}
+
+.link-secao:hover {
+    color: #aaa;
+}
+
+
+/* =====================================================
+   INVASÃO CORINTHIANA
+===================================================== */
+
+.invasao {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 75px;
+    padding-top: 70px;
+    padding-bottom: 150px;
+}
+
+.invasao-imagem {
+    position: relative;
+}
+
+.invasao-imagem img {
+    height: 600px;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition:
+        filter 0.6s ease,
+        transform 0.6s ease;
+}
+
+.invasao-imagem:hover img {
+    filter: grayscale(35%);
+}
+
+.selo-foto {
+    position: absolute;
+    right: -20px;
+    bottom: 30px;
+    padding: 17px 25px;
+    background: #f5f5f5;
+    color: #000;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2rem;
+}
+
+.invasao-texto h2 {
+    margin-top: 22px;
+}
+
+.frase-invasao {
+    margin-top: 35px;
+    padding: 23px 0;
+    border-top: 1px solid #444;
+    border-bottom: 1px solid #444;
+}
+
+.frase-invasao span {
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+}
+
+
+/* =====================================================
+   GAVIÕES DA FIEL
+===================================================== */
+
+.gavioes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 80px;
+    padding-top: 100px;
+    padding-bottom: 150px;
+    border-top: 1px solid var(--borda);
+}
+
+.gavioes-imagem img {
+    height: 540px;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
+}
+
+.gavioes-imagem:hover img {
+    filter: grayscale(30%);
+}
+
+.gavioes-texto h2 {
+    margin-top: 20px;
+}
+
+.gavioes-destaque {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin-top: 35px;
+    padding-top: 25px;
+    border-top: 1px solid #444;
+}
+
+.gavioes-destaque span {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 3.8rem;
+}
+
+.gavioes-destaque p {
+    max-width: 190px;
+    margin: 0;
+    color: #eee;
+    font-size: 0.68rem;
+    font-weight: 700;
+    line-height: 1.7;
+    letter-spacing: 0.08em;
+}
+
+
+/* =====================================================
+   GALERIA
+===================================================== */
+
+.galeria-fiel {
+    padding-top: 60px;
+    padding-bottom: 150px;
+}
+
+.grade-galeria {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    grid-template-rows: 300px 300px;
+    gap: 20px;
+}
+
+.foto-galeria {
+    position: relative;
+    min-width: 0;
+    margin: 0;
+    overflow: hidden;
+    background: #151515;
+}
+
+.foto-galeria::after {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.85),
+        transparent 65%
+    );
+    content: "";
+    pointer-events: none;
+}
+
+.foto-galeria img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(75%);
+    transition:
+        transform 0.7s ease,
+        filter 0.7s ease;
+}
+
+.foto-galeria:hover img {
+    transform: scale(1.06);
+    filter: grayscale(0%);
+}
+
+.foto-galeria figcaption {
+    position: absolute;
+    z-index: 1;
+    right: 22px;
+    bottom: 22px;
+    left: 22px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #fff;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.7rem;
+}
+
+.foto-galeria figcaption span {
+    color: #aaa;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.68rem;
+}
+
+.foto-grande {
+    grid-row: span 2;
+}
+
+.foto-mosaico,
+.foto-bandeiroes {
+    min-height: 0;
+}
+
+.foto-arena {
+    display: none;
+}
+
+
+/* =====================================================
+   A FIEL FORA DE CASA
+===================================================== */
+
+.fora-de-casa {
+    position: relative;
+    padding: 120px 8%;
+    background:
+        url("../IMAGENS/TORCIDA/fora-de-casa.jpg") center / cover no-repeat,
+        #111;
+    isolation: isolate;
+}
+
+.fora-sombra {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.96),
+        rgba(0, 0, 0, 0.7)
+    );
+}
+
+.fora-conteudo {
+    width: min(1000px, 100%);
+    margin-inline: auto;
+}
+
+.fora-conteudo h2 {
+    margin-top: 20px;
+}
+
+.fora-conteudo p {
+    max-width: 620px;
+}
+
+.fora-imagem {
+    height: 400px;
+    margin-top: 40px;
+    object-fit: cover;
+    object-position: center;
+    filter: grayscale(100%);
+}
+
+
+/* =====================================================
+   PAIXÃO DE GERAÇÕES
+===================================================== */
+
+.geracoes {
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    align-items: center;
+    gap: 75px;
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+.geracoes-imagem img {
+    height: 460px;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
+}
+
+.geracoes-imagem:hover img {
+    filter: grayscale(25%);
+}
+
+.geracoes-texto h2 {
+    margin-top: 20px;
+}
+
+
+/* =====================================================
+   FUTURA PÁGINA DOS CANTOS
+===================================================== */
+
+.voz-fiel {
+    position: relative;
+    display: grid;
+    min-height: 620px;
+    place-items: center;
+    padding: 100px 7%;
+    overflow: hidden;
+    background:
+        url("../IMAGENS/TORCIDA/arquibancada.jpg") center / cover no-repeat,
+        #111;
+    isolation: isolate;
+    text-align: center;
+}
+
+.voz-fundo {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.86);
+}
+
+.voz-conteudo {
+    width: min(760px, 100%);
+}
+
+.icone-musica {
+    margin: 25px 0 10px;
+    color: #ddd;
+    font-size: 3rem;
+}
+
+.voz-conteudo h2 {
+    margin: 0;
+    font-size: clamp(4.5rem, 12vw, 9rem);
+    line-height: 0.8;
+}
+
+.voz-conteudo p {
+    max-width: 620px;
+    margin: 30px auto;
+}
+
+.voz-status {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    color: #e4e4e4;
+    font-size: 0.67rem;
+    font-weight: 700;
+    line-height: 1.7;
+    letter-spacing: 0.06em;
+}
+
+.ponto-status {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #aaa;
+}
+
+
+/* =====================================================
+   ENCERRAMENTO
+===================================================== */
+
+.encerramento-fiel {
+    padding: 150px 7% 120px;
+    text-align: center;
+}
+
+.encerramento-etiqueta {
+    color: #888;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+}
+
+.encerramento-fiel h2 {
+    margin: 35px 0;
+    font-size: clamp(4rem, 12vw, 10rem);
+    line-height: 0.8;
+}
+
+.encerramento-fiel h2 span {
+    color: #777;
+}
+
+.linha-encerramento {
+    width: 70px;
+    height: 3px;
+    margin: 35px auto;
+    background: #fff;
+}
+
+.encerramento-fiel p {
+    color: #aaa;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+
+/* =====================================================
+   VOLTAR PARA HISTÓRIA
+===================================================== */
+
+.voltar-historia {
+    display: flex;
+    justify-content: center;
+    padding: 0 20px 65px;
+}
+
+.voltar-historia a {
+    padding: 16px 23px;
+    border: 1px solid #555;
+    color: #ddd;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.voltar-historia a:hover {
+    background: #fff;
+    color: #000;
+}
+
+
+/* =====================================================
+   ANIMAÇÕES
+===================================================== */
+
+.revelar {
+    opacity: 0;
+    transform: translateY(35px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.revelar.mostrar {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes entradaHero {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVIDADE — TABLETS
+===================================================== */
+
+@media (max-width: 950px) {
+
+    .introducao-fiel {
+        grid-template-columns: 35px 1fr;
+        gap: 30px;
+    }
+
+    .introducao-imagem {
+        grid-column: 2;
+    }
+
+    .introducao-imagem img {
+        height: 400px;
+    }
+
+    .invasao,
+    .gavioes,
+    .geracoes {
+        gap: 40px;
+    }
+
+    .invasao-imagem img,
+    .gavioes-imagem img,
+    .geracoes-imagem img {
+        height: 430px;
+    }
+
+    .grade-galeria {
+        grid-template-rows: 250px 250px;
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVIDADE — CELULARES
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .hero-torcida {
+        min-height: 88svh;
+        padding: 120px 7% 90px;
+        background-position: 58% center;
+    }
+
+    .hero-conteudo h1 {
+        font-size: clamp(6rem, 27vw, 10rem);
+    }
+
+    .hero-conteudo p {
+        font-size: 0.85rem;
+    }
+
+    .hero-numero {
+        right: 7%;
+        bottom: 25px;
+        font-size: 0.57rem;
+    }
+
+    .secao-padrao {
+        width: 88%;
+    }
+
+    .subtitulo-secao {
+        font-size: 0.62rem;
+    }
+
+    h2 {
+        font-size: clamp(2.7rem, 12vw, 4.3rem);
+    }
+
+    p {
+        font-size: 0.88rem;
+        line-height: 1.85;
+    }
+
+    .introducao-fiel {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding-top: 85px;
+        padding-bottom: 90px;
+    }
+
+    .introducao-lateral {
+        display: none;
+    }
+
+    .introducao-imagem {
+        grid-column: auto;
+        margin-top: 10px;
+    }
+
+    .introducao-imagem img {
+        height: 320px;
+    }
+
+    .historia-torcida {
+        padding-top: 30px;
+        padding-bottom: 80px;
+    }
+
+    .cabecalho-secao {
+        margin-bottom: 40px;
+    }
+
+    .linha-tempo-torcida::before {
+        left: 16px;
+    }
+
+    .momento-torcida {
+        grid-template-columns: 33px 1fr;
+        gap: 17px;
+        padding: 25px 0 35px;
+    }
+
+    .momento-ano {
+        justify-content: flex-start;
+    }
+
+    .momento-ano span {
+        padding: 7px 4px;
+        font-size: 0.9rem;
+        writing-mode: vertical-rl;
+    }
+
+    .momento-conteudo h3 {
+        font-size: 1.8rem;
+    }
+
+    .invasao,
+    .gavioes,
+    .geracoes {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding-top: 70px;
+        padding-bottom: 85px;
+    }
+
+    .invasao-imagem img,
+    .gavioes-imagem img,
+    .geracoes-imagem img {
+        height: 340px;
+    }
+
+    .selo-foto {
+        right: -8px;
+        bottom: 18px;
+        padding: 12px 17px;
+        font-size: 1.5rem;
+    }
+
+    .gavioes-imagem {
+        order: 0;
+    }
+
+    .gavioes-texto {
+        order: 1;
+    }
+
+    .galeria-fiel {
+        padding-top: 45px;
+        padding-bottom: 85px;
+    }
+
+    .grade-galeria {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 280px 190px 190px;
+        gap: 10px;
+    }
+
+    .foto-grande {
+        grid-column: span 2;
+        grid-row: auto;
+    }
+
+    .foto-galeria figcaption {
+        right: 12px;
+        bottom: 13px;
+        left: 12px;
+        gap: 7px;
+        font-size: 1.25rem;
+    }
+
+    .foto-galeria figcaption span {
+        font-size: 0.58rem;
+    }
+
+    .foto-arena {
+        display: block;
+        grid-column: span 2;
+    }
+
+    .fora-de-casa {
+        padding: 80px 6%;
+    }
+
+    .fora-imagem {
+        height: 270px;
+    }
+
+    .voz-fiel {
+        min-height: 550px;
+        padding: 80px 6%;
+    }
+
+    .voz-status {
+        font-size: 0.58rem;
+    }
+
+    .encerramento-fiel {
+        padding: 100px 6% 75px;
+    }
+
+    .encerramento-fiel p {
+        font-size: 0.62rem;
+        line-height: 1.8;
+    }
+
+    .voltar-historia a {
+        text-align: center;
+        font-size: 0.65rem;
+    }
+
+}
+
+
+/* =====================================================
+   ACESSIBILIDADE — MOVIMENTO REDUZIDO
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .revelar {
+        opacity: 1;
+        transform: none;
+    }
+
+}
